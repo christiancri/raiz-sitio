@@ -1,0 +1,5 @@
+# Archivos de repositorio: viven en Git, no en el sitio publicado.
+# Sin esto, Cloudflare Pages los sirve en raizweb.com/README.md y similares.
+*.md
+.gitignore
+.assetsignore

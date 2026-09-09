@@ -103,3 +103,6 @@ con teclado.
 - Cloudflare sirve las páginas sin extensión (`/nosotros`), pero **los enlaces internos
   usan `.html`**. Mantener esa forma para no generar redirecciones de más.
 - Al publicar, revisar que `sitemap.xml` siga cuadrando si añadiste o quitaste páginas.
+- **No borrar `.assetsignore`.** Cloudflare Pages publica *todo* lo que hay en la carpeta:
+  sin ese archivo, `README.md` y `CLAUDE.md` quedan legibles en `raizweb.com/README.md`.
+  Si añades documentación nueva que no sea `.md`, súmala ahí.
