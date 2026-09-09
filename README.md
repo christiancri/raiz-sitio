@@ -9,8 +9,13 @@ Cloudflare Pages, proyecto **`raiz-web`** (Direct Upload, sin conexión a Git).
 Dominios: `raizweb.com`, `www.raizweb.com`, `raiz-web.pages.dev`.
 
 ```bash
-npx wrangler pages deploy . --project-name raiz-web
+./publicar.sh
 ```
+
+El script despliega una copia limpia, sin los archivos de este repo. Pages sube todo lo
+que hay en la carpeta y no tiene forma de excluir nada, así que un `wrangler pages deploy .`
+directo publicaría este README en `raizweb.com/README.md` — que es justo lo que pasó
+entre el 9 de septiembre y el arreglo.
 
 ## Estructura
 

@@ -25,8 +25,13 @@ que estás parado, y desde allá subiría los expedientes de clientes a raizweb.
 sin conexión al repositorio. Para que un cambio se vea en raizweb.com, desde esta carpeta:
 
 ```
-npx wrangler pages deploy . --project-name raiz-web
+./publicar.sh
 ```
+
+**Nunca `wrangler pages deploy .` a secas.** Pages sube *todo* lo que hay en la carpeta
+y no admite exclusiones —`.assetsignore` es de Workers, no de Pages—, así que desplegar
+la raíz deja `README.md` y este archivo legibles en `raizweb.com/README.md`. Pasó en
+septiembre de 2026. `publicar.sh` arma una copia limpia y despliega esa.
 
 Subir a GitHub y publicar son dos actos distintos: hay que hacer los dos.
 
@@ -103,6 +108,6 @@ con teclado.
 - Cloudflare sirve las páginas sin extensión (`/nosotros`), pero **los enlaces internos
   usan `.html`**. Mantener esa forma para no generar redirecciones de más.
 - Al publicar, revisar que `sitemap.xml` siga cuadrando si añadiste o quitaste páginas.
-- **No borrar `.assetsignore`.** Cloudflare Pages publica *todo* lo que hay en la carpeta:
-  sin ese archivo, `README.md` y `CLAUDE.md` quedan legibles en `raizweb.com/README.md`.
-  Si añades documentación nueva que no sea `.md`, súmala ahí.
+- **Publicar siempre con `./publicar.sh`.** Es lo único que impide que la documentación
+  del repo acabe servida en raizweb.com. Si añades un archivo que no debe publicarse y no
+  es `.md`, añádelo a la lista de `--exclude` del script.
