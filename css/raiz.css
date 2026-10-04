@@ -16,8 +16,11 @@
   --verde-claro: #5A6B4E;
   --verde-terminal: #7E8C71;
   --texto: #46463C;
-  --texto-suave: #6E6E62;
-  --texto-arena: #8A8478;
+  /* Los dos grises claros no llegaban a 4.5:1 (WCAG 1.4.3 AA) sobre los fondos
+     del sitio: --texto-suave daba 3.88:1 sobre arena y --texto-arena, 2.79:1.
+     Se oscurecieron manteniendo el tono; ahora pasan sobre paper, arena y arena-2. */
+  --texto-suave: #606056;
+  --texto-arena: #635F56;
   --texto-ink: #A9A99C;
   --texto-ink-suave: #8B8B7E;
   --linea: #C9C3B4;              /* hairline sobre paper */
@@ -722,3 +725,50 @@ body.menu-abierto { overflow: hidden; }
 /* La nota lleva información real —precios, condiciones—, no es una cortesía
    legal: 10.5 px la dejaba en tamaño de letra chiquita. */
 .nota { font-size: 12px; }
+
+/* --- 25. Accesibilidad: salto al contenido y foco de marca ---
+   WCAG 2.4.1 (A): quien navega con teclado atravesaba los ocho enlaces de la
+   cabecera en cada página antes de llegar al contenido. El enlace vive fuera de
+   pantalla y aparece al recibir el foco. */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -200px;
+  z-index: 1200;
+  background: var(--ink);
+  color: var(--crema);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: var(--radio-s, 4px);
+  transition: top .18s ease-out;
+}
+.skip-link:focus { top: 12px; }
+
+/* WCAG 2.4.7 (AA): el foco ya era visible con el anillo del navegador, pero es
+   de 1 px y naranja sobre crema. Este usa el verde de marca y más grosor. */
+:focus-visible {
+  outline: 2px solid var(--verde);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.seccion--ink :focus-visible,
+.pie :focus-visible { outline-color: var(--crema); }
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link { transition: none; }
+}
+
+/* Texto sólo para lectores de pantalla: da estructura donde el diseño no
+   necesita un título visible. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
