@@ -700,3 +700,25 @@ body.menu-abierto { overflow: hidden; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* --- 24. Ergonomía táctil y legibilidad del microtexto ---
+   Fitts: en pantallas de dedo, el objetivo cómodo es 44×44 px. Los enlaces
+   subrayados medían 28 px de alto. El padding crece sólo donde se toca con el
+   dedo (pointer: coarse) y se compensa con margen negativo para no mover el
+   layout ya ajustado. */
+@media (pointer: coarse) {
+  .enlace-subrayado {
+    padding-block: 14px;
+    margin-block: -8px;
+  }
+  /* El botón de la cabecera es el camino principal a contacto y medía 35 px. */
+  .encabezado__barra .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* La nota lleva información real —precios, condiciones—, no es una cortesía
+   legal: 10.5 px la dejaba en tamaño de letra chiquita. */
+.nota { font-size: 12px; }
