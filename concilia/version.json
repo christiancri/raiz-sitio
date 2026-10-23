@@ -1,11 +1,9 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "fecha": "2026-10-23",
   "notas": [
-    "Prueba de 30 días y llave de licencia",
-    "Aviso de versión nueva y botón «Reportar un problema»",
-    "Varias cuentas bancarias por cliente, con todos los bancos de México",
-    "Revisión de cálculos: 17 correcciones en conciliación, pólizas e IVA",
-    "Ya no se queda en blanco al abrir con trabajo guardado"
+    "En Mac ya no dice que el programa está dañado al instalarlo",
+    "En Windows se instala sin contraseña de administrador y en español",
+    "Guardado más seguro en Windows cuando el antivirus revisa los archivos"
   ]
 }
