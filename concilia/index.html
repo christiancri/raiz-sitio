@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Descargar Concilia</title>
+  <meta name="description" content="Descarga de Concilia para despachos en prueba.">
+  <style>
+    :root { --fondo: #f6f5f1; --superficie: #fff; --texto: #1c2321; --suave: #5c6661; --borde: #e3e1da; --acento: #1f6f4a; --acento-fondo: #e6f1eb; --aviso: #8a5a00; --aviso-fondo: #fbf3df; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fondo); color: var(--texto); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
+    header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .logo { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--acento); color: #fff; font-weight: 700; font-size: 20px; }
+    h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 20px; margin: 36px 0 12px; }
+    h3 { font-size: 16px; margin: 0 0 6px; }
+    p { margin: 0 0 12px; }
+    .suave { color: var(--suave); }
+    .tarjeta { background: var(--superficie); border: 1px solid var(--borde); border-radius: 14px; padding: 20px; }
+    .version { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 16px; }
+    .version b { font-size: 18px; }
+    .descargas { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .descarga { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1px solid var(--borde); border-radius: 12px; background: var(--superficie); color: var(--texto); text-decoration: none; }
+    .descarga:hover, .descarga:focus-visible { border-color: var(--acento); background: var(--acento-fondo); outline: none; }
+    .descarga strong { font-size: 17px; }
+    .descarga span { color: var(--suave); font-size: 14px; }
+    .descarga.sugerida { border: 2px solid var(--acento); }
+    .descarga.sugerida::after { content: "Para tu computadora"; align-self: flex-start; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--acento); background: var(--acento-fondo); padding: 2px 8px; border-radius: 999px; }
+    ol { padding-left: 22px; margin: 0; }
+    li { margin-bottom: 8px; }
+    .pasos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .nota { background: var(--aviso-fondo); color: var(--aviso); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+    .notas ul { margin: 6px 0 0; padding-left: 20px; }
+    kbd { font: inherit; font-weight: 600; }
+    footer { margin-top: 48px; color: var(--suave); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="logo" aria-hidden="true">C</span>
+    <strong>Concilia</strong>
+  </header>
+
+  <h1>Descarga Concilia</h1>
+  <p class="suave">Conciliación bancaria y pólizas para CONTPAQi, en tu computadora. Tu información y la de tus clientes no sale de tu equipo.</p>
+
+  <section class="tarjeta" aria-labelledby="titulo-descarga">
+    <div class="version">
+      <b id="titulo-descarga">Versión <span id="numero">más reciente</span></b>
+      <span class="suave" id="fecha"></span>
+    </div>
+    <div class="descargas">
+      <a class="descarga" id="windows" href="https://descargas.raizweb.com/concilia/ultima/Concilia-windows-instalador.exe">
+        <strong>Windows</strong><span>Windows 10 y 11 · instalador .exe</span>
+      </a>
+      <a class="descarga" id="mac-arm64" href="https://descargas.raizweb.com/concilia/ultima/Concilia-mac-arm64.dmg">
+        <strong>Mac con chip Apple</strong><span>M1, M2, M3, M4 · archivo .dmg</span>
+      </a>
+      <a class="descarga" id="mac-x64" href="https://descargas.raizweb.com/concilia/ultima/Concilia-mac-x64.dmg">
+        <strong>Mac con Intel</strong><span>Modelos anteriores a 2021 · archivo .dmg</span>
+      </a>
+    </div>
+    <p class="suave" style="margin-top:14px">¿Qué Mac tengo? Menú  → <kbd>Acerca de esta Mac</kbd>: si dice «Chip Apple M…», es chip Apple; si dice «Procesador Intel», es Intel.</p>
+    <div class="notas" id="notas" hidden><h3>Qué cambió en esta versión</h3><ul id="lista-notas"></ul></div>
+  </section>
+
+  <h2>Cómo instalarla</h2>
+  <div class="pasos">
+    <div class="tarjeta">
+      <h3>En Windows</h3>
+      <ol>
+        <li>Abre el archivo que descargaste.</li>
+        <li>Si aparece <kbd>Windows protegió su PC</kbd>, da clic en <kbd>Más información</kbd> y luego en <kbd>Ejecutar de todas formas</kbd>.</li>
+        <li>Sigue el instalador. Concilia queda en el menú Inicio y en el escritorio.</li>
+      </ol>
+    </div>
+    <div class="tarjeta">
+      <h3>En Mac</h3>
+      <ol>
+        <li>Abre el archivo .dmg y arrastra Concilia a la carpeta <kbd>Aplicaciones</kbd>.</li>
+        <li>Abre Concilia desde Aplicaciones.</li>
+        <li>Si dice que no se puede abrir, ve a <kbd>Ajustes del Sistema</kbd> → <kbd>Privacidad y seguridad</kbd>, baja hasta el final y da clic en <kbd>Abrir de todos modos</kbd>. Solo se hace la primera vez.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="nota" style="margin-top:14px">Estos avisos aparecen porque el programa todavía no tiene la firma digital de Apple y Microsoft; es normal durante la prueba.</p>
+
+  <h2>Actualizar</h2>
+  <p>Cuando haya una versión nueva, Concilia te avisa al abrir. Descárgala aquí mismo e instálala encima de la que tienes: <b>tus clientes, cierres y el trabajo que tengas abierto se conservan</b>.</p>
+
+  <h2>Prueba y licencia</h2>
+  <p>Al instalarla tienes <b>30 días de prueba</b> con todas las funciones. Para seguir después, pide tu llave de licencia y escríbela en Concilia, en el botón de licencia de la parte de arriba.</p>
+  <p>Si algo falla, en esa misma ventana está <b>Reportar un problema</b>: arma un reporte sin datos de tus clientes para que lo mandes por WhatsApp.</p>
+
+  <footer>Concilia · Christian Macías</footer>
+</main>
+<script>
+  // Marca la descarga de esta computadora y muestra qué cambió (si no carga, la página funciona igual)
+  (function () {
+    var ua = navigator.userAgent;
+    var id = /Windows/i.test(ua) ? 'windows' : /Mac/i.test(ua) ? 'mac-arm64' : null;
+    if (id) document.getElementById(id).classList.add('sugerida');
+    fetch('version.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (v) {
+      if (!v || !v.version) return;
+      document.getElementById('numero').textContent = v.version;
+      if (v.fecha) document.getElementById('fecha').textContent = 'Publicada el ' + v.fecha.split('-').reverse().join('/');
+      if (v.notas && v.notas.length) {
+        var ul = document.getElementById('lista-notas');
+        v.notas.forEach(function (n) { var li = document.createElement('li'); li.textContent = n; ul.appendChild(li); });
+        document.getElementById('notas').hidden = false;
+      }
+    }).catch(function () {});
+  })();
+</script>
+</body>
+</html>

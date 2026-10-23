@@ -1,0 +1,10 @@
+# Cabeceras de Cloudflare Pages.
+
+# Descarga de Concilia: página oculta, fuera de los buscadores
+/concilia/*
+  X-Robots-Tag: noindex, nofollow
+
+# El programa instalado lee este archivo para saber si hay versión nueva
+/concilia/version.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-cache
