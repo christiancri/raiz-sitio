@@ -1,9 +1,9 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "fecha": "2026-10-23",
   "notas": [
-    "En Mac ya no dice que el programa está dañado al instalarlo",
-    "En Windows se instala sin contraseña de administrador y en español",
-    "Guardado más seguro en Windows cuando el antivirus revisa los archivos"
+    "Más seguridad: el programa no se puede alterar ni abrir con herramientas para saltarse la licencia",
+    "Respaldo diario automático de tus datos y recuperación si el archivo se daña",
+    "Mensajes claros cuando una factura, catálogo o Excel viene dañado"
   ]
 }

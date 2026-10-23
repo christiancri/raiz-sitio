@@ -34,6 +34,12 @@
     .nota { background: var(--aviso-fondo); color: var(--aviso); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
     .notas ul { margin: 6px 0 0; padding-left: 20px; }
     kbd { font: inherit; font-weight: 600; }
+    .etiqueta { display: inline-block; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--aviso); background: var(--aviso-fondo); padding: 3px 10px; border-radius: 999px; }
+    .funciones { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 20px 0; }
+    .funciones .tarjeta { padding: 16px; }
+    .funciones p { margin: 0; color: var(--suave); font-size: 15px; }
+    .prueba { margin-bottom: 28px; }
+    .prueba p:last-child { margin-bottom: 0; }
     footer { margin-top: 48px; color: var(--suave); font-size: 14px; }
   </style>
 </head>
@@ -44,8 +50,28 @@
     <strong>Concilia</strong>
   </header>
 
+  <span class="etiqueta">Fase de prueba</span>
   <h1>Descarga Concilia</h1>
-  <p class="suave">Conciliación bancaria y pólizas para CONTPAQi, en tu computadora. Tu información y la de tus clientes no sale de tu equipo.</p>
+  <p>Concilia es un programa para despachos contables que trabajan con CONTPAQi. Hace en minutos dos tareas que hoy se hacen a mano: <b>la conciliación bancaria</b> y <b>la captura de pólizas desde las facturas XML</b>. Todo se queda en tu computadora: tu información y la de tus clientes no sale de tu equipo.</p>
+
+  <div class="funciones">
+    <div class="tarjeta">
+      <h3>Conciliación bancaria</h3>
+      <p>Lee el estado de cuenta en PDF y el auxiliar de bancos de CONTPAQi, empareja los movimientos y te explica por qué no cuadra: comisiones sin registrar, importes mal capturados, duplicados.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Pólizas desde los XML</h3>
+      <p>Arrastra las facturas del mes y Concilia arma las pólizas con tu catálogo de cuentas, listas para importar a CONTPAQi. También señala las facturas PPD que no tienen complemento de pago.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Papeles de trabajo</h3>
+      <p>Exporta la conciliación a Excel y a PDF para el expediente, y guarda el trabajo de cada cliente y cada cuenta mes con mes.</p>
+    </div>
+  </div>
+
+  <div class="nota prueba">
+    <p><b>Concilia está en fase de prueba.</b> Ya tiene todas sus funciones, pero lo estamos afinando con los despachos que lo prueban. Puede haber detalles por corregir: revisa los resultados antes de usarlos en la contabilidad y, si algo no sale bien, repórtalo. Cada corrección llega como una versión nueva en esta misma página.</p>
+  </div>
 
   <section class="tarjeta" aria-labelledby="titulo-descarga">
     <div class="version">
@@ -53,13 +79,13 @@
       <span class="suave" id="fecha"></span>
     </div>
     <div class="descargas">
-      <a class="descarga" id="windows" href="https://descargas.raizweb.com/concilia/0.2.1/Concilia-0.2.1-windows-instalador.exe">
+      <a class="descarga" id="windows" href="https://descargas.raizweb.com/concilia/0.2.2/Concilia-0.2.2-windows-instalador.exe">
         <strong>Windows</strong><span>Windows 10 y 11 · instalador .exe</span>
       </a>
-      <a class="descarga" id="mac-arm64" href="https://descargas.raizweb.com/concilia/0.2.1/Concilia-0.2.1-mac-arm64.dmg">
+      <a class="descarga" id="mac-arm64" href="https://descargas.raizweb.com/concilia/0.2.2/Concilia-0.2.2-mac-arm64.dmg">
         <strong>Mac con chip Apple</strong><span>M1, M2, M3, M4 · archivo .dmg</span>
       </a>
-      <a class="descarga" id="mac-x64" href="https://descargas.raizweb.com/concilia/0.2.1/Concilia-0.2.1-mac-x64.dmg">
+      <a class="descarga" id="mac-x64" href="https://descargas.raizweb.com/concilia/0.2.2/Concilia-0.2.2-mac-x64.dmg">
         <strong>Mac con Intel</strong><span>Modelos anteriores a 2021 · archivo .dmg</span>
       </a>
     </div>
