@@ -1,9 +1,9 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "fecha": "2026-10-23",
   "notas": [
-    "Más seguridad: el programa no se puede alterar ni abrir con herramientas para saltarse la licencia",
-    "Respaldo diario automático de tus datos y recuperación si el archivo se daña",
-    "Mensajes claros cuando una factura, catálogo o Excel viene dañado"
+    "Nuevo paso «Facturas» en la conciliación: liga cada depósito y retiro del banco con su factura, aunque no traiga referencia",
+    "El mes empieza por Pólizas y después la conciliación: el programa sigue ese orden",
+    "Lo dudoso queda por confirmar con el porqué, y lo que falta se pregunta al cliente por WhatsApp"
   ]
 }
