@@ -128,6 +128,10 @@
 <script>
   // Marca la descarga de esta computadora y muestra qué cambió (si no carga, la página funciona igual)
   (function () {
+    // Liga de un despacho (?de=contadores-ruiz): la descarga lleva esa marca para saber quién la bajó. No se pide nada más.
+    var de = (new URLSearchParams(location.search).get('de') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 48);
+    var marca = de ? '?de=' + de : '';
+    ['windows', 'mac-arm64', 'mac-x64'].forEach(function (id) { var a = document.getElementById(id); a.href = a.href.split('?')[0] + marca; });
     var ua = navigator.userAgent;
     var id = /Windows/i.test(ua) ? 'windows' : /Mac/i.test(ua) ? 'mac-arm64' : null;
     if (id) document.getElementById(id).classList.add('sugerida');
@@ -136,9 +140,9 @@
       document.getElementById('numero').textContent = v.version;
       // Cada versión tiene su propia liga: así ningún navegador entrega una copia guardada de la anterior
       var base = 'https://descargas.raizweb.com/concilia/' + v.version + '/Concilia-' + v.version;
-      document.getElementById('windows').href = base + '-windows-instalador.exe';
-      document.getElementById('mac-arm64').href = base + '-mac-arm64.dmg';
-      document.getElementById('mac-x64').href = base + '-mac-x64.dmg';
+      document.getElementById('windows').href = base + '-windows-instalador.exe' + marca;
+      document.getElementById('mac-arm64').href = base + '-mac-arm64.dmg' + marca;
+      document.getElementById('mac-x64').href = base + '-mac-x64.dmg' + marca;
       if (v.fecha) document.getElementById('fecha').textContent = 'Publicada el ' + v.fecha.split('-').reverse().join('/');
       if (v.notas && v.notas.length) {
         var ul = document.getElementById('lista-notas');
