@@ -1,9 +1,12 @@
 {
-  "version": "0.2.3",
-  "fecha": "2026-10-23",
+  "version": "0.2.4",
+  "fecha": "2026-10-25",
   "notas": [
-    "Nuevo paso «Facturas» en la conciliación: liga cada depósito y retiro del banco con su factura, aunque no traiga referencia",
-    "El mes empieza por Pólizas y después la conciliación: el programa sigue ese orden",
-    "Lo dudoso queda por confirmar con el porqué, y lo que falta se pregunta al cliente por WhatsApp"
+    "Bajar los XML del SAT con la e.firma del cliente, directo desde Pólizas (opcional)",
+    "Revisión en el SAT: facturas canceladas y proveedores en la lista 69-B",
+    "Cierre del mes: todos tus clientes en una pantalla",
+    "Pólizas de cobros y pagos desde el banco, listas para CONTPAQi",
+    "El cruce con facturas ahora lee también la póliza de CONTPAQi",
+    "Diseño renovado"
   ]
 }
