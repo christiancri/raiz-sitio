@@ -1,12 +1,10 @@
 {
-  "version": "0.2.4",
-  "fecha": "2026-10-25",
+  "version": "0.2.5",
+  "fecha": "2026-11-03",
   "notas": [
-    "Bajar los XML del SAT con la e.firma del cliente, directo desde Pólizas (opcional)",
-    "Revisión en el SAT: facturas canceladas y proveedores en la lista 69-B",
-    "Cierre del mes: todos tus clientes en una pantalla",
-    "Pólizas de cobros y pagos desde el banco, listas para CONTPAQi",
-    "El cruce con facturas ahora lee también la póliza de CONTPAQi",
-    "Diseño renovado"
+    "Saldos de clientes y proveedores: qué debe cada uno, con sus complementos de pago y notas de crédito",
+    "Estados de cuenta de Santander, Banorte, Banamex, Scotiabank y HSBC",
+    "Reporte de problemas por WhatsApp, con los errores del programa",
+    "Correcciones de dos revisiones a fondo (cálculos, cruce con facturas, SAT y guardado)"
   ]
 }

@@ -41,6 +41,20 @@
     .prueba { margin-bottom: 28px; }
     .prueba p:last-child { margin-bottom: 0; }
     footer { margin-top: 48px; color: var(--suave); font-size: 14px; }
+    .recorrido { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); margin: 16px 0 8px; padding: 0; list-style: none; counter-reset: paso; }
+    .recorrido li { counter-increment: paso; margin: 0; padding: 10px 12px; background: var(--superficie); border: 1px solid var(--borde); border-radius: 10px; font-size: 14px; }
+    .recorrido li::before { content: counter(paso); display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: var(--acento); color: #fff; font-size: 12px; font-weight: 700; }
+    .recorrido b { display: block; margin-top: 4px; }
+    .funcion { margin-top: 14px; }
+    .funcion h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 18px; margin-bottom: 8px; }
+    .funcion ul { margin: 0 0 12px; padding-left: 20px; }
+    .funcion li { margin-bottom: 6px; }
+    .beneficio { margin: 0; padding: 10px 12px; border-radius: 10px; background: var(--acento-fondo); color: var(--acento); font-size: 15px; }
+    .nuevo { font-size: 12px; font-weight: 700; color: var(--acento); background: var(--acento-fondo); border: 1px solid var(--acento); padding: 1px 8px; border-radius: 999px; }
+    .afinando { margin-top: 14px; }
+    .afinando ul { margin: 6px 0 0; padding-left: 20px; }
+    a { color: var(--acento); }
+    .afinando li { margin-bottom: 6px; }
   </style>
 </head>
 <body>
@@ -52,20 +66,20 @@
 
   <span class="etiqueta">Fase de prueba</span>
   <h1>Descarga Concilia</h1>
-  <p>Concilia es un programa para despachos contables que trabajan con CONTPAQi. Hace en minutos dos tareas que hoy se hacen a mano: <b>la conciliación bancaria</b> y <b>la captura de pólizas desde las facturas XML</b>. Todo se queda en tu computadora: tu información y la de tus clientes no sale de tu equipo.</p>
+  <p>Concilia es un programa para despachos contables que trabajan con CONTPAQi. Hace en minutos tareas que hoy se hacen a mano: <b>la captura de pólizas desde las facturas XML</b>, <b>los saldos de cada cliente</b> y <b>la conciliación bancaria</b>. Todo se queda en tu computadora: tu información y la de tus clientes no sale de tu equipo. <a href="#todo">Ver todo lo que hace</a>.</p>
 
   <div class="funciones">
-    <div class="tarjeta">
-      <h3>Conciliación bancaria</h3>
-      <p>Lee el estado de cuenta en PDF y el auxiliar de bancos de CONTPAQi, empareja los movimientos y te explica por qué no cuadra: comisiones sin registrar, importes mal capturados, duplicados.</p>
-    </div>
     <div class="tarjeta">
       <h3>Pólizas desde los XML</h3>
       <p>Arrastra las facturas del mes y Concilia arma las pólizas con tu catálogo de cuentas, listas para importar a CONTPAQi. También señala las facturas PPD que no tienen complemento de pago.</p>
     </div>
     <div class="tarjeta">
-      <h3>Papeles de trabajo</h3>
-      <p>Exporta la conciliación a Excel y a PDF para el expediente, y guarda el trabajo de cada cliente y cada cuenta mes con mes.</p>
+      <h3>Saldos de clientes</h3>
+      <p>Qué debe cada cliente, factura por factura, ya con sus complementos de pago y sus notas de crédito o descuento, y su estado de cuenta listo para mandárselo.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Conciliación bancaria</h3>
+      <p>Lee el estado de cuenta en PDF de BBVA, Santander, Banorte, Banamex, Scotiabank y HSBC, y el auxiliar de CONTPAQi; empareja los movimientos y te explica por qué no cuadra.</p>
     </div>
   </div>
 
@@ -79,19 +93,116 @@
       <span class="suave" id="fecha"></span>
     </div>
     <div class="descargas">
-      <a class="descarga" id="windows" href="https://descargas.raizweb.com/concilia/0.2.4/Concilia-0.2.4-windows-instalador.exe">
+      <a class="descarga" id="windows" href="https://descargas.raizweb.com/concilia/0.2.5/Concilia-0.2.5-windows-instalador.exe">
         <strong>Windows</strong><span>Windows 10 y 11 · instalador .exe</span>
       </a>
-      <a class="descarga" id="mac-arm64" href="https://descargas.raizweb.com/concilia/0.2.4/Concilia-0.2.4-mac-arm64.dmg">
+      <a class="descarga" id="mac-arm64" href="https://descargas.raizweb.com/concilia/0.2.5/Concilia-0.2.5-mac-arm64.dmg">
         <strong>Mac con chip Apple</strong><span>M1, M2, M3, M4 · archivo .dmg</span>
       </a>
-      <a class="descarga" id="mac-x64" href="https://descargas.raizweb.com/concilia/0.2.4/Concilia-0.2.4-mac-x64.dmg">
+      <a class="descarga" id="mac-x64" href="https://descargas.raizweb.com/concilia/0.2.5/Concilia-0.2.5-mac-x64.dmg">
         <strong>Mac con Intel</strong><span>Modelos anteriores a 2021 · archivo .dmg</span>
       </a>
     </div>
     <p class="suave" style="margin-top:14px">¿Qué Mac tengo? Menú  → <kbd>Acerca de esta Mac</kbd>: si dice «Chip Apple M…», es chip Apple; si dice «Procesador Intel», es Intel.</p>
     <div class="notas" id="notas" hidden><h3>Qué cambió en esta versión</h3><ul id="lista-notas"></ul></div>
   </section>
+
+  <h2 id="todo">Todo lo que hace Concilia</h2>
+  <p>Concilia sigue el orden de trabajo del contador: primero las pólizas del mes, después la conciliación del banco, y al final el cierre de todos los clientes. En cada paso hace lo repetitivo y te deja a ti revisar y decidir.</p>
+  <ol class="recorrido">
+    <li><b>Facturas y pólizas</b>De los XML del mes al archivo para CONTPAQi</li>
+    <li><b>Saldos</b>Qué debe cada cliente y qué se le debe a cada proveedor</li>
+    <li><b>Conciliación</b>El banco contra CONTPAQi, y por qué no cuadra</li>
+    <li><b>Facturas del banco</b>Cada depósito y retiro con su factura</li>
+    <li><b>Cierre del mes</b>Todos tus clientes en una pantalla</li>
+  </ol>
+
+  <section class="tarjeta funcion">
+    <h3>1. Pólizas desde las facturas XML</h3>
+    <ul>
+      <li><b>Las facturas del mes:</b> arrastras la carpeta de XML (CFDI 3.3 y 4.0, con complementos de pago) o, si quieres, los bajas del SAT desde Concilia con la e.firma del cliente. La e.firma se usa en el momento y nunca se guarda.</li>
+      <li><b>Revisión en el SAT (opcional):</b> te dice qué facturas están canceladas y qué proveedores están en la lista 69-B de operaciones simuladas, antes de deducirlas.</li>
+      <li><b>Una póliza por factura y por complemento de pago,</b> cuadrada al centavo: IVA cobrado o no cobrado, acreditable pagado o pendiente, retenciones de ISR e IVA, IEPS, notas de crédito, facturas en dólares e impuestos locales como el de hospedaje.</li>
+      <li><b>Con tu catálogo de cuentas:</b> lo cargas una vez (XML de contabilidad electrónica, Excel o CSV) y Concilia pone la subcuenta de cada cliente y proveedor y la cuenta de gasto según el tipo de producto. Lo que corriges, lo aprende para el mes siguiente.</li>
+      <li><b>Antes de enviar, revisa:</b> cuentas que no existen o son de mayor, facturas sustituidas, notas sin su factura y facturas de meses anteriores que ya deberían estar en CONTPAQi. Lo dudoso queda «por revisar», con el motivo a la vista.</li>
+      <li><b>Facturas a crédito (PPD):</b> las que no tienen complemento de pago, los complementos que llegaron después del día 5, y el IVA que sigue pendiente, con un mensaje ya redactado para pedirle el complemento al proveedor.</li>
+      <li><b>Salida:</b> el archivo TXT para «Cargar pólizas» de CONTPAQi, de una sola vez, y un Excel de revisión.</li>
+    </ul>
+    <p class="beneficio">Para qué te sirve: deja de capturar factura por factura. Un mes que lleva horas de captura queda en minutos de revisión, con el IVA en la cuenta correcta.</p>
+  </section>
+
+  <section class="tarjeta funcion">
+    <h3>2. Saldos de clientes y proveedores <span class="nuevo">Nuevo</span></h3>
+    <ul>
+      <li><b>Qué debe cada cliente, factura por factura:</b> a cada factura le resta sus pagos (complementos de pago) y sus notas de crédito, descuento, devolución o aplicación de anticipo.</li>
+      <li><b>Antigüedad:</b> lo que tiene hasta 30 días, de 31 a 60, de 61 a 90 y más de 90.</li>
+      <li><b>Saldo a favor:</b> notas sin factura, descuentos sobre facturas ya pagadas y pagos de más quedan a favor del cliente, y se ve de dónde sale cada uno.</li>
+      <li><b>A la fecha que quieras:</b> eliges el corte (por ejemplo, el último día del mes) y solo cuenta lo que pasó hasta ese día.</li>
+      <li><b>Casos difíciles:</b> facturas en dólares pagadas a otro tipo de cambio, pagos en parcialidades, facturas sustituidas, clientes de «público en general» y pagos de facturas que no están cargadas, que se avisan aparte.</li>
+      <li><b>Estado de cuenta para el cliente:</b> con un clic copias el mensaje con sus facturas, abonos y saldo, listo para mandárselo por WhatsApp o correo. También en Excel, con resumen y detalle.</li>
+      <li><b>Lo mismo con proveedores:</b> cuánto se le debe a cada uno y desde cuándo.</li>
+    </ul>
+    <p class="beneficio">Para qué te sirve: saber qué te debe cada cliente aplicando complementos y notas de descuento, que es justo lo que CONTPAQi no muestra por factura. Cobranza al día sin hojas de cálculo armadas a mano.</p>
+  </section>
+
+  <section class="tarjeta funcion">
+    <h3>3. Conciliación bancaria</h3>
+    <ul>
+      <li><b>Lee el estado de cuenta en PDF tal como te llega</b> de <b>BBVA, Santander, Banorte, Banamex, Scotiabank y HSBC</b> <span class="nuevo">Nuevo: cinco bancos más</span>. Con cualquier otro banco, marcas las columnas una vez con unos clics y Concilia lo recuerda.</li>
+      <li><b>Y el auxiliar de Bancos de CONTPAQi,</b> en PDF o Excel («Movimientos auxiliares del catálogo»).</li>
+      <li><b>Revisa que el estado de cuenta cuadre por dentro</b> (saldo inicial, movimientos y saldo final) antes de culpar a la contabilidad.</li>
+      <li><b>Empareja solo</b> por importe y fecha, cheque o referencia, varios movimientos contra uno, y lo que ligaste a mano en meses anteriores.</li>
+      <li><b>«¿Por qué no cuadra?»:</b> no solo te da la diferencia; nombra la causa y el renglón (dígitos cambiados, signo al revés, póliza duplicada, movimiento en otro mes, comisiones e intereses sin registrar) y la suma hasta llegar a la diferencia total.</li>
+      <li><b>Ponerse al corriente:</b> varios meses de un jalón; lo pendiente de un mes pasa solo al siguiente.</li>
+      <li><b>Papel de trabajo</b> en PDF y Excel para el expediente, con quién elaboró y la fecha, y la póliza de ajuste de comisiones e intereses.</li>
+    </ul>
+    <p class="beneficio">Para qué te sirve: la conciliación deja de ser renglón por renglón. Llegas directo a lo que hay que corregir, y los meses atrasados se ponen al día en una sentada.</p>
+  </section>
+
+  <section class="tarjeta funcion">
+    <h3>4. Cada movimiento del banco con su factura</h3>
+    <ul>
+      <li><b>Aunque el banco no diga nada:</b> busca la factura de cada depósito y retiro por importe, fecha, nombre o RFC en el concepto, folio, UUID, la cuenta de quien paga y lo que escribiste en la póliza de CONTPAQi.</li>
+      <li><b>Liga solo lo seguro;</b> lo dudoso queda «por confirmar» con el porqué, y una factura nunca cobra dos movimientos.</li>
+      <li><b>Aprende de cada cliente</b> lo que ligas a mano y lo usa el mes siguiente.</li>
+      <li><b>Pólizas de cobros y pagos</b> de lo que el banco muestra y CONTPAQi todavía no tiene.</li>
+      <li><b>Dudas para el cliente:</b> los depósitos que no se sabe qué son, en un mensaje de WhatsApp ya redactado.</li>
+    </ul>
+    <p class="beneficio">Para qué te sirve: la pregunta de siempre, «¿este depósito qué factura es?», la contesta el programa en la mayoría de los casos, y solo te quedan las dudas reales.</p>
+  </section>
+
+  <section class="tarjeta funcion">
+    <h3>5. Cierre del mes y tu despacho</h3>
+    <ul>
+      <li><b>Todos tus clientes en una pantalla:</b> a quién ya le enviaste pólizas, qué cuentas están conciliadas y qué sigue con cada uno.</li>
+      <li><b>Varios clientes y varias cuentas bancarias por cliente,</b> cada uno con su trabajo guardado por separado.</li>
+      <li><b>Guardado automático:</b> si cierras el programa o se apaga la computadora, al abrir sigues donde te quedaste.</li>
+      <li><b>Respaldo diario automático</b> y respaldo manual para pasarte a otra computadora.</li>
+    </ul>
+    <p class="beneficio">Para qué te sirve: el dueño del despacho ve el avance de todos los clientes sin preguntarle a cada auxiliar, y lo aprendido se queda aunque cambie el personal.</p>
+  </section>
+
+  <section class="tarjeta funcion">
+    <h3>Tu información no sale de tu computadora</h3>
+    <ul>
+      <li>Todo se trabaja en tu equipo: no hay servidores de Concilia guardando datos de tus clientes.</li>
+      <li>No necesita internet para trabajar. Solo se conecta al SAT cuando tú lo pides, y para avisarte si hay versión nueva (sin enviar nada tuyo).</li>
+      <li>La e.firma se usa en memoria y se olvida; nunca se guarda.</li>
+      <li>El programa está sellado: una copia alterada no abre.</li>
+      <li>Si algo falla, el reporte de problemas quita RFC, nombres de archivo, cuentas y correos antes de mandarlo.</li>
+    </ul>
+  </section>
+
+  <div class="nota afinando">
+    <p><b>Lo que todavía estamos afinando en la fase de prueba</b></p>
+    <ul>
+      <li><b>Lectores de bancos:</b> se probaron con estados de cuenta reales de cuentas de cheques empresariales, y cuadran al centavo. Otro producto del mismo banco puede traer otro formato; si no cuadra, Concilia te avisa y marcas las columnas. HSBC todavía no se prueba con un estado de cuenta digital real.</li>
+      <li><b>Archivo de pólizas para CONTPAQi:</b> cárgalo primero en una empresa de prueba y compáralo con una póliza exportada de tu CONTPAQi, antes de usarlo en la empresa real.</li>
+      <li><b>Criterios contables:</b> algunos casos (retenciones en facturas a crédito, diferencia cambiaria, impuestos locales retenidos) quedan «por revisar» para que tú decidas. Concilia propone; el criterio es tuyo.</li>
+      <li><b>Saldos:</b> salen de los XML que cargues. Para ver lo que viene de meses anteriores, carga también esas facturas y sus complementos.</li>
+      <li>Revisa siempre los resultados antes de usarlos en la contabilidad, y si algo no sale bien, repórtalo: cada corrección llega como una versión nueva en esta página.</li>
+    </ul>
+  </div>
 
   <h2>Cómo instalarla</h2>
   <div class="pasos">
