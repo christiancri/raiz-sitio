@@ -1,11 +1,9 @@
 {
-  "version": "0.2.6",
+  "version": "0.2.7",
   "fecha": "2026-11-08",
   "notas": [
-    "Estados de cuenta de Monex",
-    "Selector de cuentas con el catálogo: subcuentas de una cuenta de mayor y búsqueda por número o nombre",
-    "Prueba rápida más clara: la empresa sigue a los XML y se explica por qué cada factura quedó fuera",
-    "Descarga del SAT por rango de meses, y elegir otra e.firma después de un error",
-    "Correcciones de una auditoría de cálculos (dólares, saldos y conciliación)"
+    "Facturas de contado (PUE) directo contra Bancos o provisionadas, a elegir por cliente",
+    "Pagadas en efectivo van a Caja y con tarjeta de crédito a su acreedor",
+    "En «Revisar pólizas» se puede cambiar el banco de cada póliza"
   ]
 }
