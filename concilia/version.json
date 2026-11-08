@@ -1,9 +1,7 @@
 {
-  "version": "0.2.7",
+  "version": "0.2.8",
   "fecha": "2026-11-08",
   "notas": [
-    "Facturas de contado (PUE) directo contra Bancos o provisionadas, a elegir por cliente",
-    "Pagadas en efectivo van a Caja y con tarjeta de crédito a su acreedor",
-    "En «Revisar pólizas» se puede cambiar el banco de cada póliza"
+    "Reporte de los XML en Excel: régimen, uso, forma de pago, conceptos, pagos y canceladas, con alertas fiscales"
   ]
 }
