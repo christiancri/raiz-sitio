@@ -1,8 +1,7 @@
 {
-  "version": "0.2.14",
+  "version": "0.2.15",
   "fecha": "2026-11-09",
   "notas": [
-    "Busca versiones nuevas y se descarga desde conciliacontable.com.mx, el sitio propio de Concilia",
-    "Reportar un problema y pedir tu licencia ahora es por correo, a contacto@conciliacontable.com.mx"
+    "Mejoras internas para administrar licencias y registros; tu forma de trabajar no cambia"
   ]
 }
