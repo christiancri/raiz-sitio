@@ -1,9 +1,8 @@
 {
-  "version": "0.2.12",
+  "version": "0.2.13",
   "fecha": "2026-11-09",
   "notas": [
-    "Conciliación con Banregio y con el auxiliar de CONTPAQi tal como se exporta, en PDF o en Excel",
-    "Empareja pagos con la póliza fechada otro día y varias facturas cobradas en un solo depósito",
-    "Reconoce la póliza que junta muchos movimientos del banco (por ejemplo «DIFERENCIAS XML Y BANCO») y explica su diferencia"
+    "Las pólizas de ajuste como «DIFERENCIA ENTRE XML Y BANCO» ya no salen como depósitos en tránsito: se señalan como ajuste",
+    "Los movimientos de los primeros y últimos días del mes van juntos en una sola tarjeta, no uno por uno"
   ]
 }
