@@ -1,7 +1,7 @@
 {
-  "version": "0.2.10",
+  "version": "0.2.11",
   "fecha": "2026-11-09",
   "notas": [
-    "Estados de cuenta de BBVA con su formato real (probado con un estado de cuenta real: cuadra al centavo)"
+    "Resumen del mes al cargar los XML: facturas por tipo, IVA según las pólizas, meses enviados a CONTPAQi y alertas fiscales"
   ]
 }
