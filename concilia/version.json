@@ -1,7 +1,7 @@
 {
-  "version": "0.2.9",
+  "version": "0.2.10",
   "fecha": "2026-11-09",
   "notas": [
-    "Clientes en lista con buscador, para despachos con muchos clientes (o en tarjetas, a elegir)"
+    "Estados de cuenta de BBVA con su formato real (probado con un estado de cuenta real: cuadra al centavo)"
   ]
 }
