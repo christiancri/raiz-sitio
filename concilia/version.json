@@ -1,7 +1,9 @@
 {
-  "version": "0.2.11",
+  "version": "0.2.12",
   "fecha": "2026-11-09",
   "notas": [
-    "Resumen del mes al cargar los XML: facturas por tipo, IVA según las pólizas, meses enviados a CONTPAQi y alertas fiscales"
+    "Conciliación con Banregio y con el auxiliar de CONTPAQi tal como se exporta, en PDF o en Excel",
+    "Empareja pagos con la póliza fechada otro día y varias facturas cobradas en un solo depósito",
+    "Reconoce la póliza que junta muchos movimientos del banco (por ejemplo «DIFERENCIAS XML Y BANCO») y explica su diferencia"
   ]
 }
