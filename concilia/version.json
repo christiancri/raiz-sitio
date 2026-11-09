@@ -1,8 +1,8 @@
 {
-  "version": "0.2.13",
+  "version": "0.2.14",
   "fecha": "2026-11-09",
   "notas": [
-    "Las pólizas de ajuste como «DIFERENCIA ENTRE XML Y BANCO» ya no salen como depósitos en tránsito: se señalan como ajuste",
-    "Los movimientos de los primeros y últimos días del mes van juntos en una sola tarjeta, no uno por uno"
+    "Busca versiones nuevas y se descarga desde conciliacontable.com.mx, el sitio propio de Concilia",
+    "Reportar un problema y pedir tu licencia ahora es por correo, a contacto@conciliacontable.com.mx"
   ]
 }
