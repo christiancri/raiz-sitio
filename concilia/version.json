@@ -1,7 +1,7 @@
 {
-  "version": "0.2.8",
-  "fecha": "2026-11-08",
+  "version": "0.2.9",
+  "fecha": "2026-11-09",
   "notas": [
-    "Reporte de los XML en Excel: régimen, uso, forma de pago, conceptos, pagos y canceladas, con alertas fiscales"
+    "Clientes en lista con buscador, para despachos con muchos clientes (o en tarjetas, a elegir)"
   ]
 }
