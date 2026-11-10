@@ -1,7 +1,8 @@
 {
-  "version": "0.2.15",
-  "fecha": "2026-11-09",
+  "version": "0.2.16",
+  "fecha": "2026-11-10",
   "notas": [
-    "Mejoras internas para administrar licencias y registros; tu forma de trabajar no cambia"
+    "Compra tu licencia en línea desde Concilia con «Ver planes y comprar»",
+    "Si compraste en línea, tu llave se renueva sola cada mes o cada año"
   ]
 }
