@@ -1,7 +1,9 @@
 {
-  "version": "0.2.17",
-  "fecha": "2026-11-10",
+  "version": "0.2.18",
+  "fecha": "2026-11-11",
   "notas": [
-    "Cada llave se activa en una sola computadora; si cambias de computadora, escríbenos y te la pasamos"
+    "Más seguridad: tus datos y descargas del SAT solo los puede abrir tu usuario de la computadora",
+    "La e.firma se olvida sola al bloquear o suspender la computadora",
+    "Actualización de seguridad del motor del programa"
   ]
 }
