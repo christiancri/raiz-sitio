@@ -1,9 +1,8 @@
 {
-  "version": "0.2.18",
-  "fecha": "2026-11-11",
+  "version": "0.2.19",
+  "fecha": "2026-11-20",
   "notas": [
-    "Más seguridad: tus datos y descargas del SAT solo los puede abrir tu usuario de la computadora",
-    "La e.firma se olvida sola al bloquear o suspender la computadora",
-    "Actualización de seguridad del motor del programa"
+    "Tu prueba y tu licencia se comprueban con el servicio de Concilia y ya no se pueden falsificar",
+    "Respaldo con contraseña opcional para proteger los datos de tus clientes"
   ]
 }
