@@ -1,8 +1,7 @@
 {
-  "version": "0.2.19",
+  "version": "0.2.20",
   "fecha": "2026-11-20",
   "notas": [
-    "Tu prueba y tu licencia se comprueban con el servicio de Concilia y ya no se pueden falsificar",
-    "Respaldo con contraseña opcional para proteger los datos de tus clientes"
+    "Administra tu plan desde Concilia: cancela, cambia de tarjeta o de plan y baja tus recibos con «Administrar mi plan»"
   ]
 }
