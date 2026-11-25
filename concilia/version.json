@@ -1,7 +1,7 @@
 {
-  "version": "0.2.20",
-  "fecha": "2026-11-20",
+  "version": "0.2.21",
+  "fecha": "2026-11-25",
   "notas": [
-    "Administra tu plan desde Concilia: cancela, cambia de tarjeta o de plan y baja tus recibos con «Administrar mi plan»"
+    "Pólizas: eliges el mes que trabajas y ves la fecha de pago y de emisión de cada complemento. PPD pendientes se filtra por fechas. La revisión en el SAT muestra avance y explica qué revisa. En Conciliación, cada sugerencia muestra los dos movimientos y qué hace cada botón."
   ]
 }
