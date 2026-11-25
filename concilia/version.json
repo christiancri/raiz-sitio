@@ -1,7 +1,7 @@
 {
-  "version": "0.2.21",
+  "version": "0.2.22",
   "fecha": "2026-11-25",
   "notas": [
-    "Pólizas: eliges el mes que trabajas y ves la fecha de pago y de emisión de cada complemento. PPD pendientes se filtra por fechas. La revisión en el SAT muestra avance y explica qué revisa. En Conciliación, cada sugerencia muestra los dos movimientos y qué hace cada botón."
+    "Pólizas: los complementos pagados en un mes y emitidos en otro ya se pueden confirmar con ✓ y entran al archivo para CONTPAQi."
   ]
 }
