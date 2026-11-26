@@ -1,7 +1,7 @@
 {
-  "version": "0.2.22",
-  "fecha": "2026-11-25",
+  "version": "0.2.23",
+  "fecha": "2026-11-26",
   "notas": [
-    "Pólizas: los complementos pagados en un mes y emitidos en otro ya se pueden confirmar con ✓ y entran al archivo para CONTPAQi."
+    "Conciliación: el botón «Conciliar los sugeridos» cuenta igual que los contadores, y la ventana de cada sugerencia ya no tapa los últimos renglones."
   ]
 }
